@@ -33,3 +33,14 @@ WHERE ID_Transaksi = 'TRX005';
 
 --Cek Final
 SELECT * FROM tb-transaksi WHERE ID_Transaksi - 'TRX005';
+
+--Delete
+INSERT INTO tb_transaksi VALUES
+('TRX007', '2026-09-17', 1002, 1003, 5000000, 'Transfer', NULL, NULL);
+
+--dengan whare
+DELETE FROM tb_transaksi
+WHERE ID_Transaksi = 'TRX007';
+
+--cek final
+SELECT * FROM tb_transaksi;
