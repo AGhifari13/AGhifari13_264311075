@@ -8,15 +8,14 @@ INSERT INTO tb_nasabah VALUES
 (1006, 'Fajar Abadi',   'Perorangan', 'Aktif');
 
 INSERT INTO tb_laporan VALUES
-('LTM-001', '2026-09-16', 'Perlu pemeriksaan lebih lanjut');
+('LTM-001', '2026-09-16', 'Perlu pemeriksaan lebih lanjut'),
+('LTM-002', '2026-09-17', 'Sedang diperiksa'),
+('LTM-003', '2026-09-18', 'Selesai diperiksa');
 
 INSERT INTO tb_transaksi VALUES
 ('TRX001', '2026-09-15', 1001, 1002, 50000000, 'Transfer', 'LTM-001', 'Transaksi berantai'),
 ('TRX002', '2026-09-15', 1002, 1003, 48000000, 'Transfer', 'LTM-001', 'Transaksi berantai'),
-('TRX003', '2026-09-15', 1003, 1004, 45000000, 'Transfer', 'LTM-001', 'Transaksi berantai'),
-('TRX004', '2026-09-15', 1004, 1001, 40000000, 'Transfer', 'LTM-001', 'Membentuk siklus'),
+('TRX003', '2026-09-15', 1003, 1004, 45000000, 'Transfer', 'LTM-002', 'Transaksi berantai'),
+('TRX004', '2026-09-15', 1004, 1001, 40000000, 'Transfer', 'LTM-003', 'Membentuk siklus'),
 ('TRX005', '2026-09-16', 1001, 1005, 10000000, 'Transfer', NULL, NULL),
 ('TRX006', '2026-09-16', 1005, 1006,  9000000, 'Transfer', NULL, NULL);
-
-INSERT INTO tb_rekap_laporan VALUES
-('LTM-001', 4, 183000000);
