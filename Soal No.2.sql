@@ -19,3 +19,17 @@ INSERT INTO tb_transaksi VALUES
 ('TRX004', '2026-09-15', 1004, 1001, 40000000, 'Transfer', 'LTM-003', 'Membentuk siklus'),
 ('TRX005', '2026-09-16', 1001, 1005, 10000000, 'Transfer', NULL, NULL),
 ('TRX006', '2026-09-16', 1005, 1006,  9000000, 'Transfer', NULL, NULL);
+
+--read
+SELECT * FROM tb_nasabah;
+
+--updet
+SELECT * FROM tb-transaksi WHERE ID_Transaksi - 'TRX005';
+
+--Updet Nominal pada 'TRX005'
+UPDATE  tb_transaksi
+SET Nominal - 12000000
+WHERE ID_Transaksi = 'TRX005';
+
+--Cek Final
+SELECT * FROM tb-transaksi WHERE ID_Transaksi - 'TRX005';
