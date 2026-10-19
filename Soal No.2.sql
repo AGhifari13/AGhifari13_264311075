@@ -1,0 +1,22 @@
+
+INSERT INTO tb_nasabah VALUES
+(1001, 'Andi Pratama',  'Perorangan', 'Aktif'),
+(1002, 'Budi Santoso',  'Perorangan', 'Aktif'),
+(1003, 'Citra Mandiri', 'Perusahaan', 'Aktif'),
+(1004, 'Dimas Jaya',    'Perorangan', 'Aktif'),
+(1005, 'Eka Wijaya',    'Perorangan', 'Aktif'),
+(1006, 'Fajar Abadi',   'Perorangan', 'Aktif');
+
+INSERT INTO tb_laporan VALUES
+('LTM-001', '2026-09-16', 'Perlu pemeriksaan lebih lanjut');
+
+INSERT INTO tb_transaksi VALUES
+('TRX001', '2026-09-15', 1001, 1002, 50000000, 'Transfer', 'LTM-001', 'Transaksi berantai'),
+('TRX002', '2026-09-15', 1002, 1003, 48000000, 'Transfer', 'LTM-001', 'Transaksi berantai'),
+('TRX003', '2026-09-15', 1003, 1004, 45000000, 'Transfer', 'LTM-001', 'Transaksi berantai'),
+('TRX004', '2026-09-15', 1004, 1001, 40000000, 'Transfer', 'LTM-001', 'Membentuk siklus'),
+('TRX005', '2026-09-16', 1001, 1005, 10000000, 'Transfer', NULL, NULL),
+('TRX006', '2026-09-16', 1005, 1006,  9000000, 'Transfer', NULL, NULL);
+
+INSERT INTO tb_rekap_laporan VALUES
+('LTM-001', 4, 183000000);
